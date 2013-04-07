@@ -9,4 +9,7 @@ class User < ActiveRecord::Base
   		user.save!
   	end
   end
+
+  has_many :statuses
+  
 end
