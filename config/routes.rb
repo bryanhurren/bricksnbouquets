@@ -1,6 +1,6 @@
 Bricks::Application.routes.draw do
 
-  root to: => 'statuses#index'
+  root :to => 'statuses#index'
 
   match 'auth/:provider/callback', to: 'sessions#create'
   match 'auth/failure', to: redirect('/')
