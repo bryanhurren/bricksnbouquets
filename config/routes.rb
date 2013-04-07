@@ -5,5 +5,5 @@ Bricks::Application.routes.draw do
 
   resources :statuses
 
-  root to: 'statues#index'
+  root to: 'statuses#index'
 end
