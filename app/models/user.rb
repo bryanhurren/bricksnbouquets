@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   has_many :statuses
 
   def facebook
-    @facebook ||= Koala::Facebook:API:new(oauth_token)
+    @facebook ||= Koala::Facebook::API.new(oauth_token)
   end
   
 end
