@@ -1,3 +1,14 @@
+<% content_for :head do %>
+	<%= tag :meta, property: "fb:app_id", content: "505706086152635" %>
+	<%= tag :meta, property: "og:site_name", content: "Bricks and Bouquets" %>
+	<%= tag :meta, property: "og:type", content: "bricksnbouquets:brick" %>
+	<%= tag :meta, property: "og:url", content: status_url(@status) %>
+	<%= tag :meta, property: "og:title", content: "Sample Brick" %>
+	<%= tag :meta, property: "og:image", content: "https://fbstatic-a.akamaihd.net/images/devsite/attachment_blank.png" %>
+<% end %>
+
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
