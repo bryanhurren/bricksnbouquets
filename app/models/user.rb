@@ -12,6 +12,11 @@ class User < ActiveRecord::Base
 
   has_many :statuses
 
+  def self.share_status(user_id, status_url)
+    user = User.find(user_id)
+    user.facebook.put_connections("me", "bricksnbouquets:brick", status: status_url)
+  end
+
   def facebook
     @facebook ||= Koala::Facebook::API.new(oauth_token)
   end
