@@ -42,6 +42,10 @@ class StatusesController < ApplicationController
   def create
     @status = current_user.statuses.build(params[:status])
 
+    if current_user
+      User.delay.share_status(current_user.id, status_url(@status))
+    end
+
     respond_to do |format|
       if @status.save
         format.html { redirect_to @status, notice: 'Status was successfully created.' }
